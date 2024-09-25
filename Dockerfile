@@ -1,7 +1,7 @@
 FROM openjdk:21
 
-COPY ./target/Calculator-SPE-MiniProject-1.0-SNAPSHOT-jar-with-dependencies.jar ./
+COPY ./target/cal-1.0.0-jar-with-dependencies.jar ./
 
 WORKDIR ./
 
-CMD ["java", "-jar", "Calculator-SPE-MiniProject-1.0-SNAPSHOT-jar-with-dependencies.jar"]
+CMD ["java", "-jar", "cal-1.0.0-jar-with-dependencies.jar"]

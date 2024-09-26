@@ -32,8 +32,6 @@ pipeline{
 
         stage("Stage 5 : Clean Unwanted Docker Images"){
             steps{
-                sh "docker ps -a -q | xargs docker stop | xargs docker rm"
-                sh "docker rm -f ${docker ps -a -q}"
                 sh "docker container prune -f"
                 sh "docker image prune -a -f"
             }
@@ -41,11 +39,11 @@ pipeline{
 
         stage('Stage 6 : Ansible Deployment') {
             steps {
-                ansiblePlaybook colorized: true,
-                credentialsId: 'localhost',
-                installation: 'Ansible',
-                inventory: 'inventory',
-                playbook: 'Deploy_Calculator.yml'
+//                 ansiblePlaybook colorized: true,
+//                 credentialsId: 'localhost',
+//                 installation: 'Ansible',
+//                 inventory: 'inventory',
+//                 playbook: 'Deploy_Calculator.yml'
                     sh 'ansible-playbook -i inventory Deploy_Calculator.yml'
 
              }

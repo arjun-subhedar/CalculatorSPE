@@ -52,7 +52,7 @@ public class CalculatorTest {
         Assert.assertEquals(0.0, result, 0.0001);
 
         result = Main.Power(0, 0);  // Mathematical edge case
-        Assert.assertEquals(1.0, result, 0.0001);  // By definition, 0^0 is typically considered 1
+        Assert.assertEquals(1.0, result, 0.0001);
     }
 }
 

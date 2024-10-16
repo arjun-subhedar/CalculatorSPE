@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage("Stage 1 : Git Clone"){
             steps{
-//                 git "https://github.com/arjunsubhedar/Caluclator_SPE_MiniProject.git"
+                git "https://github.com/arjunsubhedar/Caluclator_SPE_MiniProject.git"
                     sh 'ls'
             }
         }
@@ -36,7 +36,7 @@ pipeline{
                 sh "docker image prune -a -f"
             }
         }
-
+()
         stage('Stage 6 : Ansible Deployment') {
             steps {
 //                 ansiblePlaybook colorized: true,

@@ -39,7 +39,6 @@ public class CalculatorTest {
 
         Assert.assertThrows(IllegalArgumentException.class, () -> Main.NaturalLog(-5));
     }
-
     @Test
     public void testPower() {
         double result = Main.Power(2, 3);
